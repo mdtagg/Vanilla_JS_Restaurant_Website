@@ -1,0 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
+#content {
+    display:flex;
+    flex-direction: column;
+    background-color:black;
+}
+
+nav {
+
+}
