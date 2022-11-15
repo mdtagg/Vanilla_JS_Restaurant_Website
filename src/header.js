@@ -9,25 +9,27 @@ const title = () => {
     return title
 }
 
+let storeTab = ""
+
 const nav = () => {
     const nav = document.createElement('nav')
     const navList = document.createElement('ul')
     const navOptions = ['About', 'Menu', 'Contact']
+    
     for(let i = 0;i < 3;i++) {
         let navElem = document.createElement('li')
         let navLink = document.createElement('a')
         navLink.textContent = navOptions[i]
         navLink.setAttribute('tabindex',[i + 1])
-        navLink.addEventListener('keydown', changeTab)
-        // navLink.classList.add('navLink')
+        // navLink.addEventListener('keydown', changeTab)
+        navLink.addEventListener('keydown', main)
         navElem.appendChild(navLink)
         navList.appendChild(navElem)
+        // addEvent(navLink,'onfocus',changeTab)
     }
     nav.appendChild(navList)
     return nav
-}
-
-let storeTab = ""
+    }
 const changeTab = (e) => {
     let tab = ''
     const tabIndex = e.target.attributes.tabindex.value
@@ -39,12 +41,8 @@ const changeTab = (e) => {
         tab = 'contact'
     }
     storeTab = tab
-    console.log(storeTab)
+    // console.log(storeTab)
 }
-
-// const storeTab = (tab) => {
-//     console.log(tab)
-// }
 
 const header = () => {
     const header = document.createElement('header')
@@ -53,4 +51,4 @@ const header = () => {
     return header
 }
 
-export { header, storeTab }
+export { header, storeTab, nav}
