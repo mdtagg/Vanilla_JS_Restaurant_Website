@@ -1,19 +1,7 @@
-import { titleComp } from './title'
+import { header } from './header'
 
-document.body.appendChild(titleComp())
-// import './styles.css'
-// import pizza from './pizza.png'
+const content = document.getElementById('content')
 
-// export function component() {
+content.appendChild(header())
 
-//     const title = document.createElement('div')
-//     const myPizzaImage = new Image()
-//     myPizzaImage.src = pizza
-//     title.textContent = 'test'
-
-//     title.appendChild(myPizzaImage)
-//     return title
-// }
-
-// document.body.appendChild(component())
 
