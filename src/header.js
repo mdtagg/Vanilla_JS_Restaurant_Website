@@ -2,16 +2,16 @@
 import './styles.css'
 
 const title = () => {
-    const title = document.createElement('div')
+    const title = document.createElement('h1')
     title.setAttribute('id','title')
-    title.textContent = 'Pizza Place'
+    title.textContent = 'The Pizza Palace'
     return title
 }
 
 const nav = () => {
     const nav = document.createElement('nav')
     const navList = document.createElement('ul')
-    const navOptions = ['Home', 'Menu', 'Contact']
+    const navOptions = ['About', 'Menu', 'Contact']
     for(let i = 0;i < 3;i++) {
         let navElem = document.createElement('li')
         let navLink = document.createElement('a')

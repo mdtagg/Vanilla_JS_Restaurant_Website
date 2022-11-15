@@ -9,6 +9,7 @@ body {
 }
 
 /* #content {
+    height:100%;
     
 } */
 
@@ -17,16 +18,22 @@ header {
     display:flex;
     flex-direction: column;
     align-items: center;
+    height:20vh;
+}
+
+#title {
+    font-size: 5rem;
+    margin:auto;
+    color:white;
 }
 
 nav {
-    margin:20px;
+    margin:10px;
 }
 
 nav li {
     display:inline;
     padding:20px;
-    
 }
 
 nav a {
@@ -41,9 +48,23 @@ nav a:hover {
     text-decoration: underline;
 }
 
-#title {
-    font-size: 5rem;
-    margin:auto;
+main {
+    display:flex;
+    height:80vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.about {
     color:white;
+    font-size:4rem;
+    text-align: center;
+    background-color:rgba(0,0,0,.8);
+    height:50%;
+    width:95%;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    /* margin:100px; */
 }
 
