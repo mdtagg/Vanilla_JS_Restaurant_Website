@@ -19,23 +19,27 @@ header {
     align-items: center;
 }
 
-nav ul {
-    /* display:flex;
-    justify-content: center; */
+nav {
+    margin:20px;
 }
 
 nav li {
     display:inline;
     padding:20px;
+    
 }
 
 nav a {
     color:white;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    font-style:italic;
 }
 
-
+nav a:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
 
 #title {
     font-size: 5rem;

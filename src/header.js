@@ -2,7 +2,6 @@
 import './styles.css'
 
 const title = () => {
-
     const title = document.createElement('div')
     title.setAttribute('id','title')
     title.textContent = 'Pizza Place'
@@ -12,10 +11,11 @@ const title = () => {
 const nav = () => {
     const nav = document.createElement('nav')
     const navList = document.createElement('ul')
+    const navOptions = ['Home', 'Menu', 'Contact']
     for(let i = 0;i < 3;i++) {
         let navElem = document.createElement('li')
         let navLink = document.createElement('a')
-        navLink.textContent = 'test'
+        navLink.textContent = navOptions[i]
         navElem.appendChild(navLink)
         navList.appendChild(navElem)
     }
