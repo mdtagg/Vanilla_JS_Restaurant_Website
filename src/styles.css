@@ -43,7 +43,7 @@ nav a {
     font-style:italic;
 }
 
-nav a:hover {
+a:hover {
     cursor: pointer;
     text-decoration: underline;
 }
@@ -68,3 +68,17 @@ main {
     /* margin:100px; */
 }
 
+footer {
+    background-color:black;
+    height:10vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer a {
+    text-decoration: none;
+    color:white;
+    font-size: 1.5rem;
+    
+}
