@@ -1,6 +1,6 @@
 
 import './styles.css'
-import main from './mainSection'
+import { createMain } from './mainSection'
 
 const title = () => {
     const title = document.createElement('h1')
@@ -9,7 +9,7 @@ const title = () => {
     return title
 }
 
-let storeTab = ""
+// let storeTab = ""
 
 const nav = () => {
     const nav = document.createElement('nav')
@@ -20,27 +20,25 @@ const nav = () => {
         let navElem = document.createElement('li')
         let navLink = document.createElement('a')
         navLink.textContent = navOptions[i]
-        navLink.setAttribute('tabindex',[i + 1])
-        // navLink.addEventListener('keydown', changeTab)
-        navLink.addEventListener('keydown', main)
+        navLink.setAttribute('data-attribute', [i])
+        navLink.addEventListener('click', changeTab)
         navElem.appendChild(navLink)
         navList.appendChild(navElem)
-        // addEvent(navLink,'onfocus',changeTab)
     }
     nav.appendChild(navList)
     return nav
-    }
+}
 const changeTab = (e) => {
     let tab = ''
-    const tabIndex = e.target.attributes.tabindex.value
-    if(tabIndex === '1') {
+    const tabIndex = e.target.dataset.attribute
+    if(tabIndex === '0') {
         tab = 'about'
-    }else if(tabIndex === '2') {
+    }else if(tabIndex === '1') {
         tab = 'menu'
     }else {
         tab = 'contact'
     }
-    storeTab = tab
+    createMain(tab)
     // console.log(storeTab)
 }
 
@@ -51,4 +49,4 @@ const header = () => {
     return header
 }
 
-export { header, storeTab, nav}
+export { header, nav}

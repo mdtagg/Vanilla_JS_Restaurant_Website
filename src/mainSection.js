@@ -1,5 +1,5 @@
 import './styles.css'
-import { storeTab } from './header'
+// import { storeTab } from './header'
 
 const about = () => {
     const about = document.createElement('pre')
@@ -9,20 +9,30 @@ const about = () => {
     return about
 }
 
-const main = () => {
+const menu = () => {
+
+}
+
+const contact = () => {
+    
+}
+
+const createMain = (tab) => {
     
     const main = document.createElement('main')
-    if(storeTab === "" || storeTab === "about") {
+    if(tab === "" || tab === "about") {
         main.appendChild(about())
-    }else if(storeTab === "menu") {
+    }else if(tab === "menu") {
         // main.removeChild(about)
         console.log('menu test')
-    }else if(storeTab === "contact") {
+    }else if(tab === "contact") {
         console.log('contact test')
+    }else {
+        main.appendChild(about())
     }
     return main
 }
 
 
 
-export { main }
+export { createMain }
