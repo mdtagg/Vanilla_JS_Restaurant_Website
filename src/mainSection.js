@@ -1,12 +1,30 @@
-import './styles.css'
-// import { storeTab } from './header'
+import './styles.css';
+import image from './pizza-slice.png';
 
 const about = () => {
-    const about = document.createElement('pre')
-    const aboutText = 'We are the best pizza, \n no pizza is better than our pizza'
+    const about = document.createElement('div')
     about.classList.add('panel')
     about.setAttribute('id','about')
-    about.textContent = aboutText
+
+    const myImage = new Image()
+    myImage.id = 'pizzaSlice'
+    myImage.src = image
+    about.appendChild(myImage)
+
+    const aboutUs = document.createElement('p')
+    aboutUs.textContent = 'Serving a most excellent slice'
+
+    const hours = document.createElement('p')
+    hours.textContent = 'Hours: Mon-Fri 11-10am,\n Sat-Sun 10-12am'
+
+    const orderNow = document.createElement('button')
+    orderNow.textContent = 'Order Now'
+    orderNow.id = 'orderNow'
+
+    about.appendChild(aboutUs)
+    about.appendChild(hours)
+    about.appendChild(orderNow)
+
     return about
 }
 
@@ -42,15 +60,29 @@ const createMenuItem = (item,small,medium,large) => {
     const mediumPrice = `$${medium.toString()}`
     const largePrice = `$${large.toString()}`
     return [menuItem,smallPrice,mediumPrice,largePrice]
-    
 }
-
 
 const contact = () => {
     const contact = document.createElement('div')
     contact.classList.add('panel')
     contact.setAttribute('id', 'contact')
-    contact.textContent = 'contact test'
+
+    const contactUs = document.createElement('p')
+    contactUs.textContent = 'Contact Us'
+
+    const phoneNumber = document.createElement('p')
+    phoneNumber.textContent = '555-555-5555'
+
+    const address = document.createElement('p')
+    address.textContent = '2900 Bedford Ave, Brooklyn, NY 11210'
+
+    const location = document.createElement('iframe')
+    location.setAttribute('src', `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96866.17426774463!2d-74.00851383317776!3d40.65043261285484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25b0e68bf8bc1%3A0x487ac68137fac784!2sBrooklyn%20College!5e0!3m2!1sen!2sus!4v1668619665504!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade`)
+    
+    contact.appendChild(contactUs)
+    contact.appendChild(address)
+    contact.appendChild(phoneNumber)
+    contact.appendChild(location)
     return contact
 }
 
