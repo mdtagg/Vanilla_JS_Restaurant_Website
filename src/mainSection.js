@@ -14,9 +14,37 @@ const menu = () => {
     const menu = document.createElement('div')
     menu.classList.add('panel')
     menu.setAttribute('id', 'menu')
-    menu.textContent = 'menu test'
+    const menuOptions = ['Pizzas', 'Small', 'Medium', 'Large']
+
+    const menuItems = [
+        createMenuItem('Pepperoni', 14, 17, 20),
+        createMenuItem('Cheese', 10,15,18),
+        createMenuItem('Meat-Lovers',16,20,22),
+        createMenuItem('Hawaiian',15,18,20),
+        createMenuItem('White', 12,15,18)
+    ]
+
+    const totalMenu = menuOptions.concat(menuItems).flat()
+    
+    for(let i = 0;i < totalMenu.length;i++) {
+        const menuItem = document.createElement('div')
+        menuItem.setAttribute('id', `menuItem${i}`)
+        menuItem.textContent = totalMenu[i]
+        menu.appendChild(menuItem)
+    }
+    
     return menu
 }
+
+const createMenuItem = (item,small,medium,large) => {
+    const menuItem = item
+    const smallPrice = `$${small.toString()}`
+    const mediumPrice = `$${medium.toString()}`
+    const largePrice = `$${large.toString()}`
+    return [menuItem,smallPrice,mediumPrice,largePrice]
+    
+}
+
 
 const contact = () => {
     const contact = document.createElement('div')
