@@ -1,5 +1,5 @@
 import './styles.css';
-import image from './pizza-slice.png';
+import image from './pizza-oven-3.png';
 
 const about = () => {
     const about = document.createElement('div')
@@ -69,6 +69,7 @@ const contact = () => {
 
     const contactUs = document.createElement('p')
     contactUs.textContent = 'Contact Us'
+    contactUs.id = 'contactUs'
 
     const phoneNumber = document.createElement('p')
     phoneNumber.textContent = '555-555-5555'
