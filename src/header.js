@@ -1,6 +1,6 @@
 
 import './styles.css'
-import { createMain } from './mainSection'
+import { createMain, about, menu, contact } from './mainSection'
 
 const title = () => {
     const title = document.createElement('h1')
@@ -8,8 +8,6 @@ const title = () => {
     title.textContent = 'The Pizza Palace'
     return title
 }
-
-// let storeTab = ""
 
 const nav = () => {
     const nav = document.createElement('nav')
@@ -38,8 +36,8 @@ const changeTab = (e) => {
     }else {
         tab = 'contact'
     }
+    console.log(tab)
     createMain(tab)
-    // console.log(storeTab)
 }
 
 const header = () => {
