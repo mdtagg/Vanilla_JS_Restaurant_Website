@@ -2,10 +2,38 @@
 import './styles.css'
 import { createMain, about, menu, contact } from './mainSection'
 
+class element {
+    constructor(type,attribute,attrName,textContent) {
+        this.type = type,
+        this.attribute = attribute,
+        this.attrName = attrName,
+        this.textContent = textContent
+    }
+
+    createElement() {
+        let elementNode = document.createElement(this.type)
+        // elementNode.setAttribute(this.attribute,this.attrName)
+        // elementNode.textContent = this.textContent
+        return elementNode
+    }
+
+    setAttribute(element) {
+        return element.setAttribute(this.attribute,this.attrName)
+    }
+
+    // setTextContent() {
+    //     return this.textContent
+    // }
+
+}
+
 const title = () => {
     const title = document.createElement('h1')
+    // const titleObject = new element('h1','id','title','The Pizza Palace')
+    // const title = titleObject.createElement()
     title.setAttribute('id','title')
     title.textContent = 'The Pizza Palace'
+    // titleObject.createElement()
     return title
 }
 
